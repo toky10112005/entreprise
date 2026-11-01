@@ -1,0 +1,31 @@
+.needs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #bbb;
+  font-size: 0.9rem;
+}
+
+.needs-table th,
+.needs-table td {
+  padding: 0.6rem 0.65rem;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.needs-table th {
+  background: #eee;
+  font-weight: 700;
+}
+
+.need-row:hover {
+  background: #f7f7f7;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid #333;
+  font-size: 0.75rem;
+  background: #fff;
+}

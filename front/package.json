@@ -9,12 +9,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "pinia": "^4.0.3",
+    "@coreui/chartjs": "^4.2.0",
+    "@coreui/coreui": "^5.9.1",
+    "@coreui/icons": "^3.1.0",
+    "@coreui/icons-vue": "^2.2.0",
+    "@coreui/utils": "^2.0.2",
+    "@coreui/vue": "^5.10.1",
+    "chart.js": "^4.6.1",
+    "pinia": "^4.1.0",
+    "simplebar-vue": "^2.4.2",
     "vue": "rc",
-    "vue-router": "^5.3.1"
+    "vue-router": "^5.4.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.8",
+    "sass-embedded": "^1.107.1",
     "vite": "^8.2.2",
     "vite-plugin-vue-devtools": "^8.2.1"
   },
