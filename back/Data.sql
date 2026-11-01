@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS codeigniter;
+USE codeigniter;
+
+CREATE TABLE IF NOT EXISTS etudiant (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
+    age INT NOT NULL
+);

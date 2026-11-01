@@ -1,0 +1,53 @@
+CRITICAL - 2026-04-15 06:02:08 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: /]
+in APPPATH/Config/Routes.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(818): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-04-15 06:02:12 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: /]
+in APPPATH/Config/Routes.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(818): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-04-15 06:02:51 --> ErrorException: Undefined variable $routers
+[Method: GET, Route: /]
+in APPPATH/Config/Routes.php on line 11.
+ 1 APPPATH/Config/Routes.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/RouteCollection.php(339): require('/var/www/html/S4/SI/codeigniter/codeigniter4-framework-v4.7.2-0-gb3359be/codeigniter4-framework-b3359be/app/Config/Routes.php')
+ 3 SYSTEMPATH/CodeIgniter.php(818): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-04-15 06:03:48 --> ErrorException: Declaration of App\Models\EtudiantModel::find($id) must be compatible with CodeIgniter\BaseModel::find($id = null)
+[Method: GET, Route: /]
+in APPPATH/Models/EtudiantModel.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-04-15 06:04:56 --> ErrorException: Declaration of App\Models\EtudiantModel::find($id) must be compatible with CodeIgniter\BaseModel::find($id = null)
+[Method: GET, Route: /]
+in APPPATH/Models/EtudiantModel.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-04-15 06:06:20 --> ErrorException: Declaration of App\Models\EtudiantModel::find($id) must be compatible with CodeIgniter\BaseModel::find($id = null)
+[Method: GET, Route: /]
+in APPPATH/Models/EtudiantModel.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-04-15 06:08:20 --> ErrorException: Declaration of App\Models\EtudiantModel::find($id) must be compatible with CodeIgniter\BaseModel::find($id = null)
+[Method: GET, Route: /]
+in APPPATH/Models/EtudiantModel.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-04-15 06:08:21 --> ErrorException: Declaration of App\Models\EtudiantModel::find($id) must be compatible with CodeIgniter\BaseModel::find($id = null)
+[Method: GET, Route: /]
+in APPPATH/Models/EtudiantModel.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-04-15 06:08:21 --> ErrorException: Declaration of App\Models\EtudiantModel::find($id) must be compatible with CodeIgniter\BaseModel::find($id = null)
+[Method: GET, Route: /]
+in APPPATH/Models/EtudiantModel.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
