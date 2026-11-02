@@ -1,3 +1,16 @@
+# Ty alony raha misy problème ilay login (raha resaka token f tsy hoe port):
+
+makao @back/ d manao composer install.
+
+D raha tena tsy mety d ty atao:
+    -makao @ilay répertoire an ilay back/
+    sudo apt update
+    sudo apt install php8.3-xml
+    composer require firebase/php-jwt
+
+    php -r "echo bin2hex(random_bytes(32));"
+    de ty atao anaty .env JWT_SECRET = la_cle_generee
+
 # Ajouter un système de filtre par rôle pour les utilisateurs:
 
 - [x] Ajouter le Middleware côté CI4    OK
