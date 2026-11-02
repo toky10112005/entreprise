@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\UtilisateurModel;
+use Firebase\JWT\JWT;
 
 class AuthController extends BaseController
 {
@@ -35,7 +36,15 @@ class AuthController extends BaseController
             'telephone' => $user['telephone'] ?? null,
         ];
 
-        $token = base64_encode(random_bytes(32));
+        
+        $payload = [
+            'iat'  => time(),
+            'exp'  => time() + 60 * 60 * 8, // 8h
+            'sub'  => $user['id'],
+            'role' => $user['role'],
+        ];
+
+        $token = JWT::encode($payload, env('JWT_SECRET'), 'HS256');
 
         return $this->response->setJSON([
             'message' => 'Connexion réussie',
