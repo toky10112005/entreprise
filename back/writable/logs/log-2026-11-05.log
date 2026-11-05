@@ -1,0 +1,9 @@
+DEBUG - 2026-11-05 06:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-05 06:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-05 06:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-05 07:04:10 --> Statut initial "Soumise" absent de la base.
+ERROR - 2026-11-05 07:04:38 --> Insertion du besoin annulée : Impossible d'insérer le besoin : {"manager_id":"Ce manager n'existe pas."}
+ERROR - 2026-11-05 07:06:01 --> Insertion du besoin annulée : Impossible d'insérer le besoin : {"manager_id":"Ce manager n'existe pas."}
+ERROR - 2026-11-05 07:07:11 --> Insertion du besoin annulée : Impossible d'insérer le besoin : {"manager_id":"Ce manager n'existe pas."}
+ERROR - 2026-11-05 07:07:36 --> Insertion du besoin annulée : Class "App\Models\HistoriquesStatutsDemandesRecrutementModel" not found
+ERROR - 2026-11-05 07:07:36 --> Création de besoin : Class "App\Models\HistoriquesStatutsDemandesRecrutementModel" not found
