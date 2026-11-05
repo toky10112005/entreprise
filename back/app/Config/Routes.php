@@ -19,3 +19,7 @@ $routes->group('manager', function (RouteCollection $routes) {
     $routes->options('besoins/(:num)/envoyer', 'Manager\ManagerController::options');
     $routes->options('formulaire',    'Manager\ManagerController::options');
 });
+
+$routes->group('rh',function (RouteCollection $routes){
+    $routes->get('besoins-valides','Rh\RhController::getBesoinsValides');
+});

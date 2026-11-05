@@ -7,3 +7,464 @@ ERROR - 2026-11-05 07:06:01 --> Insertion du besoin annulée : Impossible d'ins�
 ERROR - 2026-11-05 07:07:11 --> Insertion du besoin annulée : Impossible d'insérer le besoin : {"manager_id":"Ce manager n'existe pas."}
 ERROR - 2026-11-05 07:07:36 --> Insertion du besoin annulée : Class "App\Models\HistoriquesStatutsDemandesRecrutementModel" not found
 ERROR - 2026-11-05 07:07:36 --> Création de besoin : Class "App\Models\HistoriquesStatutsDemandesRecrutementModel" not found
+ERROR - 2026-11-05 10:54:06 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-05 10:54:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: manager/besoins]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+ 6 APPPATH/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-05 10:55:14 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-05 10:55:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: manager/besoins]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+ 6 APPPATH/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-05 10:55:56 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-05 10:55:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: manager/besoins]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+ 6 APPPATH/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-05 10:57:37 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-05 10:57:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: manager/besoins]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+ 6 APPPATH/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-05 10:59:37 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-05 10:59:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: manager/besoins]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+ 6 APPPATH/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-05 10:59:43 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-05 10:59:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: manager/besoins]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+ 6 APPPATH/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-05 10:59:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-05 10:59:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: manager/besoins]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+ 6 APPPATH/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-05 10:59:51 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-05 10:59:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: manager/besoins]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+ 6 APPPATH/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-05 10:59:56 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-05 10:59:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: manager/besoins]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+ 6 APPPATH/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-05 12:22:01 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\Rh/RhController::getBesoinsValides"
+[Method: GET, Route: rh/besoins-valides]
+in SYSTEMPATH/Router/Router.php on line 523.
+ 1 SYSTEMPATH/Router/Router.php(523): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName()
+ 2 SYSTEMPATH/Router/Router.php(225): CodeIgniter\Router\Router->checkRoutes()
+ 3 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle()
+ 4 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
