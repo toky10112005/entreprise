@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { createBesoin, envoyerBesoin, getFormulaireData } from '@/services/managerApi'
+import { createBesoin, getFormulaireData } from '@/services/managerApi'
 
 const router = useRouter()
 const postes = ref([])
@@ -50,7 +50,6 @@ async function soumettre() {
 
   try {
     const response = await createBesoin(data)
-    await envoyerBesoin(response.id)
     await router.push(`/manager/besoins/${response.id}`)
   } catch (exception) {
     error.value = exception.message
@@ -102,7 +101,7 @@ onMounted(chargerDonnees)
       <textarea id="commentaire" v-model="form.commentaire" rows="4"></textarea>
 
       <button type="submit" :disabled="submitting">
-        {{ submitting ? 'Envoi...' : 'Envoyer le besoin' }}
+        {{ submitting ? 'Enregistrement...' : 'Enregistrer en brouillon' }}
       </button>
     </form>
   </section>

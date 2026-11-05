@@ -1,12 +1,14 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
-import { getBesoin } from '@/services/managerApi'
+import { getBesoin, envoyerBesoin } from '@/services/managerApi'
 
 const route = useRoute()
 const besoin = ref(null)
 const loading = ref(false)
 const error = ref('')
+const sending = ref(false)
+const success = ref('')
 
 async function chargerBesoin() {
   loading.value = true
@@ -19,6 +21,22 @@ async function chargerBesoin() {
     error.value = exception.message
   } finally {
     loading.value = false
+  }
+}
+
+async function envoyer() {
+  sending.value = true
+  error.value = ''
+  success.value = ''
+
+  try {
+    const response = await envoyerBesoin(route.params.id)
+    success.value = response.message
+    await chargerBesoin()
+  } catch (exception) {
+    error.value = exception.message
+  } finally {
+    sending.value = false
   }
 }
 
@@ -44,6 +62,16 @@ onMounted(chargerBesoin)
         <dt>Date de soumission</dt>
         <dd>{{ besoin.date_soumission_demande }}</dd>
       </dl>
+
+      <p v-if="success" role="status">{{ success }}</p>
+      <button
+        v-if="besoin.statut === 'Brouillon'"
+        type="button"
+        :disabled="sending"
+        @click="envoyer"
+      >
+        {{ sending ? 'Envoi...' : 'Envoyer au RH' }}
+      </button>
 
       <h2>Détails</h2>
       <ul v-if="besoin.details?.length">
