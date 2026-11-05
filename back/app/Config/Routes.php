@@ -6,6 +6,14 @@ use App\Controllers\EtudiantController;
 /**
  * @var RouteCollection $routes
  */
-// $routes->get('/', 'Home::index'); 
-$routes->get('/', 'EtudiantController::index');
-$routes->get('/etudiant/(:num)','EtudiantController::show/$1');
+
+$routes->group('api',static function($r){
+    $r->post('login', 'AuthController::login');
+    $r->post('register', 'AuthController::register');
+    $r->post('logout', 'AuthController::logout');
+});
+
+
+$routes->group('api/manager', ['filter' => 'role:manager'], static function ($r) {
+    
+});
