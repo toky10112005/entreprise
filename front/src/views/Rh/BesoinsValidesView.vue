@@ -1,31 +1,13 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import { getBesoinValides } from '@/services/rhApi'
-
+import { BesoinToOffre, getBesoinValides } from '@/services/rhApi'
+import { nomManager, formaterDate } from '@/utils/format'
 const besoins = ref([])
 const loading = ref(false)
 const error = ref('')
+const annonceEnCours = ref(null)
+const annonceCreee = ref(null)
 
-function formaterDate(date) {
-  if (!date) {
-    return '-'
-  }
-
-  const dateFormatee = new Date(date.replace(' ', 'T'))
-  if (Number.isNaN(dateFormatee.getTime())) {
-    return date
-  }
-
-  return new Intl.DateTimeFormat('fr-FR', {
-    dateStyle: 'medium',
-    timeStyle: 'short',
-  }).format(dateFormatee)
-}
-
-function nomManager(besoin) {
-  const nom = [besoin.manager_prenom, besoin.manager_nom].filter(Boolean).join(' ')
-  return nom || '-'
-}
 
 async function chargerBesoins() {
   loading.value = true
@@ -40,6 +22,23 @@ async function chargerBesoins() {
       : 'Impossible de charger les besoins valides.'
   } finally {
     loading.value = false
+  }
+}
+
+async function creerAnnonce(besoin) {
+  annonceEnCours.value = besoin.id
+  error.value = ''
+  annonceCreee.value = null
+
+  try {
+    await BesoinToOffre(besoin.id)
+    annonceCreee.value = besoin.id
+  } catch (exception) {
+    error.value = exception instanceof Error
+      ? exception.message
+      : 'Impossible de créer l’annonce.'
+  } finally {
+    annonceEnCours.value = null
   }
 }
 
@@ -70,6 +69,7 @@ onMounted(chargerBesoins)
           <th scope="col">Manager</th>
           <th scope="col">Date de soumission</th>
           <th scope="col">Statut</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -78,6 +78,21 @@ onMounted(chargerBesoins)
           <td>{{ nomManager(besoin) }}</td>
           <td>{{ formaterDate(besoin.date_soumission_demande) }}</td>
           <td>{{ besoin.statut ?? 'Valide' }}</td>
+          <td>
+            <button
+              type="button"
+              :disabled="annonceEnCours === besoin.id || annonceCreee === besoin.id"
+              @click="creerAnnonce(besoin)"
+            >
+              {{
+                annonceEnCours === besoin.id
+                  ? 'Création...'
+                  : annonceCreee === besoin.id
+                    ? 'Annonce créée'
+                    : 'Créer une annonce'
+              }}
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>

@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8081'
+const API_BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8081/rh'
 
 async function request(path, options = {}) {
   const response = await fetch(`${API_BASE_URL}${path}`, {
@@ -30,7 +30,10 @@ async function request(path, options = {}) {
 
 
 export function getBesoinValides() {
-  return request(`/rh/besoins-valides`)
+  return request(`/besoins-valides`)
 }
 
+export function BesoinToOffre(idBesoin) {
+  return request(`/besoins/${encodeURIComponent(idBesoin)}/annonce`)
+}
 

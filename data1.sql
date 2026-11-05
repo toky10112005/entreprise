@@ -52,6 +52,8 @@ INSERT INTO workflow_decisions
 VALUES
     (1, 3, 2);
 
+
+
 -- =============================================================
 -- 3. Insertion des Utilisateurs (Managers, RH, Direction)
 -- =============================================================

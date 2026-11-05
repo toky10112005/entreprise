@@ -165,3 +165,176 @@ CREATE TABLE `historiques_statuts_demandes_recrutement` (
         FOREIGN KEY (`decideur_id`) REFERENCES `utilisateurs` (`id`)
         ON UPDATE CASCADE ON DELETE RESTRICT
 ) ENGINE=InnoDB;
+
+-- ------------------------------------------------------------
+-- BLOC 2 : Recrutement, Candidatures et Entretiens
+-- ------------------------------------------------------------
+
+-- 1. Tables de référence (Statuts)
+CREATE TABLE `statut_offre` (
+    `id_statut_offre` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `libelle` VARCHAR(100) NOT NULL,
+    PRIMARY KEY (`id_statut_offre`),
+    UNIQUE KEY `uk_statut_offre_libelle` (`libelle`)
+) ENGINE=InnoDB;
+
+CREATE TABLE `statut_candidat` (
+    `id_statut_candidat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `libelle` VARCHAR(100) NOT NULL,
+    PRIMARY KEY (`id_statut_candidat`),
+    UNIQUE KEY `uk_statut_candidat_libelle` (`libelle`)
+) ENGINE=InnoDB;
+
+CREATE TABLE `statut_candidature` (
+    `id_statut_candidature` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `libelle` VARCHAR(100) NOT NULL,
+    PRIMARY KEY (`id_statut_candidature`),
+    UNIQUE KEY `uk_statut_candidature_libelle` (`libelle`)
+) ENGINE=InnoDB;
+
+CREATE TABLE `status_entretien` (
+    `id_statut_entretien` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `libelle` VARCHAR(100) NOT NULL,
+    PRIMARY KEY (`id_statut_entretien`),
+    UNIQUE KEY `uk_status_entretien_libelle` (`libelle`)
+) ENGINE=InnoDB;
+
+-- 2. Offres d'emploi
+CREATE TABLE `Offre` (
+    `id_offre` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `besoin_id` INT UNSIGNED NOT NULL,
+    `id_rh` INT UNSIGNED NOT NULL,
+    `statut_offre_id` INT UNSIGNED NOT NULL,
+    `date_insertion` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id_offre`),
+    KEY `idx_offre_besoin` (`besoin_id`),
+    KEY `idx_offre_rh` (`id_rh`),
+    KEY `idx_offre_statut` (`statut_offre_id`),
+    CONSTRAINT `fk_offre_besoin`
+        FOREIGN KEY (`besoin_id`) REFERENCES `Besoins` (`id`)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT `fk_offre_rh`
+        FOREIGN KEY (`id_rh`) REFERENCES `utilisateurs` (`id`)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT `fk_offre_statut`
+        FOREIGN KEY (`statut_offre_id`) REFERENCES `statut_offre` (`id_statut_offre`)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB;
+
+-- 3. Candidats
+CREATE TABLE `candidats` (
+    `id_candidat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `nom` VARCHAR(100) NOT NULL,
+    `prenom` VARCHAR(100) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `statut_candidat_id` INT UNSIGNED NOT NULL,
+    `date_insertion` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id_candidat`),
+    UNIQUE KEY `uk_candidats_email` (`email`),
+    KEY `idx_candidat_statut` (`statut_candidat_id`),
+    CONSTRAINT `fk_candidat_statut`
+        FOREIGN KEY (`statut_candidat_id`) REFERENCES `statut_candidat` (`id_statut_candidat`)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB;
+
+-- 4. Historique du statut des candidats
+CREATE TABLE `HistoriqueStatutCandidat` (
+    `id_historique_statut_candidat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `candidat_id` INT UNSIGNED NOT NULL,
+    `statut_candidat_id` INT UNSIGNED NOT NULL,
+    `date_insertion` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `commentaire` TEXT NULL,
+    PRIMARY KEY (`id_historique_statut_candidat`),
+    KEY `idx_hist_candidat` (`candidat_id`),
+    KEY `idx_hist_candidat_statut` (`statut_candidat_id`),
+    CONSTRAINT `fk_hist_candidat`
+        FOREIGN KEY (`candidat_id`) REFERENCES `candidats` (`id_candidat`)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT `fk_hist_candidat_statut`
+        FOREIGN KEY (`statut_candidat_id`) REFERENCES `statut_candidat` (`id_statut_candidat`)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB;
+
+-- 5. Candidatures (Lien Offre <-> Candidat)
+CREATE TABLE `candidatures` (
+    `id_candidature` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `offre_id` INT UNSIGNED NOT NULL,
+    `candidat_id` INT UNSIGNED NOT NULL,
+    `cv` VARCHAR(255) NOT NULL,
+    `lettre_motivation` VARCHAR(255) NULL,
+    `statut_candidature_id` INT UNSIGNED NOT NULL, -- Corrigé en FK pour cohérence avec la table de référence
+    `date_insertion` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `date_modification` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `commentaire` TEXT NULL,
+    PRIMARY KEY (`id_candidature`),
+    UNIQUE KEY `uk_candidature_offre_candidat` (`offre_id`, `candidat_id`),
+    KEY `idx_candidature_offre` (`offre_id`),
+    KEY `idx_candidature_candidat` (`candidat_id`),
+    KEY `idx_candidature_statut` (`statut_candidature_id`),
+    CONSTRAINT `fk_candidature_offre`
+        FOREIGN KEY (`offre_id`) REFERENCES `Offre` (`id_offre`)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT `fk_candidature_candidat`
+        FOREIGN KEY (`candidat_id`) REFERENCES `candidats` (`id_candidat`)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT `fk_candidature_statut`
+        FOREIGN KEY (`statut_candidature_id`) REFERENCES `statut_candidature` (`id_statut_candidature`)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB;
+
+-- 6. Entretiens
+CREATE TABLE `entretiens` (
+    `id_entretien` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `candidature_id` INT UNSIGNED NOT NULL,
+    `date_entretien` DATETIME NOT NULL,
+    `statut_entretien_id` INT UNSIGNED NOT NULL, -- Corrigé en FK pour pointer vers status_entretien
+    `commentaire` TEXT NULL,
+    `rh_id` INT UNSIGNED NOT NULL,
+    PRIMARY KEY (`id_entretien`),
+    KEY `idx_entretien_candidature` (`candidature_id`),
+    KEY `idx_entretien_statut` (`statut_entretien_id`),
+    KEY `idx_entretien_rh` (`rh_id`),
+    CONSTRAINT `fk_entretien_candidature`
+        FOREIGN KEY (`candidature_id`) REFERENCES `candidatures` (`id_candidature`)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT `fk_entretien_statut`
+        FOREIGN KEY (`statut_entretien_id`) REFERENCES `status_entretien` (`id_statut_entretien`)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT `fk_entretien_rh`
+        FOREIGN KEY (`rh_id`) REFERENCES `utilisateurs` (`id`)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB;
+
+-- 7. Contrats
+CREATE TABLE `contrats` (
+    `id_contrat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `candidature_id` INT UNSIGNED NOT NULL,
+    `date_debut` DATE NOT NULL,
+    `date_fin` DATE NULL,
+    `salaire` DECIMAL(15,2) NOT NULL,
+    `commentaire` TEXT NULL,
+    PRIMARY KEY (`id_contrat`),
+    UNIQUE KEY `uk_contrat_candidature` (`candidature_id`),
+    CONSTRAINT `fk_contrat_candidature`
+        FOREIGN KEY (`candidature_id`) REFERENCES `candidatures` (`id_candidature`)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT `chk_contrat_salaire` CHECK (`salaire` >= 0)
+) ENGINE=InnoDB;
+
+-- 8. Historique du statut des candidatures
+CREATE TABLE `historique_candidature` (
+    `id_historique_candidature` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `candidature_id` INT UNSIGNED NOT NULL,
+    `statut_candidature_id` INT UNSIGNED NOT NULL,
+    `date_insertion` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `commentaire` TEXT NULL,
+    PRIMARY KEY (`id_historique_candidature`),
+    KEY `idx_hist_cand_candidature` (`candidature_id`),
+    KEY `idx_hist_cand_statut` (`statut_candidature_id`),
+    CONSTRAINT `fk_hist_cand_candidature`
+        FOREIGN KEY (`candidature_id`) REFERENCES `candidatures` (`id_candidature`)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT `fk_hist_cand_statut`
+        FOREIGN KEY (`statut_candidature_id`) REFERENCES `statut_candidature` (`id_statut_candidature`)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB;

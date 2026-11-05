@@ -468,3 +468,62 @@ in SYSTEMPATH/Router/Router.php on line 523.
  6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
  7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-05 15:40:09 --> Error: Class "App\Controllers\Rh\BesoinModel" not found
+[Method: GET, Route: rh/besoins/2/annonce]
+in APPPATH/Controllers/Rh/RhController.php on line 34.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->createAnnonce()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-05 15:40:25 --> InvalidArgumentException: Cette décision n'est pas autorisée pour ce rôle à ce stade.
+[Method: GET, Route: rh/besoins/2/annonce]
+in APPPATH/Models/BesoinsModel.php on line 187.
+ 1 APPPATH/Controllers/Rh/RhController.php(35): App\Models\BesoinsModel->changerStatut()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->createAnnonce()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-05 15:41:56 --> InvalidArgumentException: Cette décision n'est pas autorisée pour ce rôle à ce stade.
+[Method: GET, Route: rh/besoins/2/annonce]
+in APPPATH/Models/BesoinsModel.php on line 187.
+ 1 APPPATH/Controllers/Rh/RhController.php(35): App\Models\BesoinsModel->changerStatut()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->createAnnonce()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-05 15:42:09 --> InvalidArgumentException: Cette décision n'est pas autorisée pour ce rôle à ce stade.
+[Method: GET, Route: rh/besoins/2/annonce]
+in APPPATH/Models/BesoinsModel.php on line 187.
+ 1 APPPATH/Controllers/Rh/RhController.php(35): App\Models\BesoinsModel->changerStatut()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->createAnnonce()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-05 15:43:13 --> InvalidArgumentException: Cette décision n'est pas autorisée pour ce rôle à ce stade.
+[Method: GET, Route: rh/besoins/2/annonce]
+in APPPATH/Models/BesoinsModel.php on line 187.
+ 1 APPPATH/Controllers/Rh/RhController.php(35): App\Models\BesoinsModel->changerStatut()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->createAnnonce()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-05 15:43:32 --> InvalidArgumentException: Cette décision n'est pas autorisée pour ce rôle à ce stade.
+[Method: GET, Route: rh/besoins/2/annonce]
+in APPPATH/Models/BesoinsModel.php on line 187.
+ 1 APPPATH/Controllers/Rh/RhController.php(35): App\Models\BesoinsModel->changerStatut()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->createAnnonce()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()

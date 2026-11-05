@@ -22,4 +22,7 @@ $routes->group('manager', function (RouteCollection $routes) {
 
 $routes->group('rh',function (RouteCollection $routes){
     $routes->get('besoins-valides','Rh\RhController::getBesoinsValides');
+    $routes->get('besoins/(:num)/annonce','Rh\RhController::createAnnonce/$1');
+    $routes->get('offres','Rh\RhController::getListOffre');
+    $routes->get('offres/(:num)','Rh\RhController::getDetailsOffre/$1');
 });
