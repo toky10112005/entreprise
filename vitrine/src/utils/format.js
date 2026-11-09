@@ -17,11 +17,3 @@ export function formaterDate(date) {
     timeStyle: 'short',
   }).format(dateFormatee)
 }
-
-export function detailsPoste(offre) {
-  return offre.besoin?.details?.[0] ?? null
-}
-
-export function titreOffre(offre) {
-  return afficher(detailsPoste(offre)?.poste ?? `Offre #${offre.id_offre}`)
-}

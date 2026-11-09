@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { getDetailsOffre, getListOffre } from '@/services/api'
-import {afficher,titreOffre,formaterDate,detailsPoste} from '@/utils/format'
+import {afficher,formaterDate} from '@/utils/format'
 const offres = ref([])
 const loading = ref(false)
 const error = ref('')
@@ -53,27 +53,20 @@ onMounted(chargerOffres)
       <article v-for="offre in offres" :key="offre.id_offre">
         <header>
           <p>Offre #{{ offre.id_offre }}</p>
-          <h2>{{ titreOffre(offre) }}</h2>
-          <p>{{ afficher(detailsPoste(offre)?.departement) }}</p>
+          <h2>{{ offre.poste_libelle }}</h2>
         </header>
 
         <dl>
-          <dt>Statut</dt>
-          <dd>{{ afficher(offre.statut_offre) }}</dd>
-          <dt>Date de publication</dt>
-          <dd>{{ formaterDate(offre.date_insertion) }}</dd>
-          <dt>Responsable RH</dt>
-          <dd>{{ afficher(`${offre.rh_prenom ?? ''} ${offre.rh_nom ?? ''}`.trim()) }}</dd>
-          <dt>Effectif recherché</dt>
-          <dd>{{ afficher(detailsPoste(offre)?.effectif) }}</dd>
-          <dt>Motif</dt>
-          <dd>{{ afficher(detailsPoste(offre)?.motif) }}</dd>
-          <dt>Date souhaitée</dt>
-          <dd>{{ afficher(detailsPoste(offre)?.date_delai_recrutement) }}</dd>
-          <dt>Budget</dt>
-          <dd>{{ afficher(detailsPoste(offre)?.budget) }}</dd>
-          <dt>Description</dt>
-          <dd>{{ afficher(detailsPoste(offre)?.commentaire) }}</dd>
+        <dt>Salaire propose:</dt>
+        <dd>{{ offre.salaire_propose }}</dd>
+        <dt>Mode de travail:</dt>
+        <dd>{{ offre.mode_de_travail }}</dd>
+        <dt>formation requise : </dt>
+        <dd>{{ offre.formation }}</dd>
+        <dt>Competences requises :</dt>
+        <dd>{{ offre.competences_techniques }}</dd>
+        <dt>Contact:</dt>
+        <dd>{{ offre.rh_email }}</dd>
         </dl>
       </article>
     </section>

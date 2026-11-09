@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
-
 class OffresModel extends Model
 {
     protected $table         = 'Offre';
@@ -45,9 +44,13 @@ class OffresModel extends Model
     public function getDetails(int $offreId): ?array
     {
         $offre = $this->select(
-            'Offre.*, so.libelle AS statut_offre, ' .
-            'u.nom AS rh_nom, u.prenom AS rh_prenom, u.email AS rh_email'
-        )
+            'dp.salaire_min as salaire_propose,dp.mode_de_travail as mode_de_travail,' .
+            'dp.competences_techniques as competences_techniques,dp.formation as formation, u.email AS rh_email,'.
+            'Offre.besoin_id,p.libelle as poste_libelle,Offre.id_offre'
+        )   
+            ->join('details_besoins db' , 'db.besoins_id = Offre.besoin_id')
+            ->join('details_poste dp','dp.poste_id = db.poste_id')
+            ->join('postes p','p.id = dp.poste_id')
             ->join('statut_offre so', 'so.id_statut_offre = Offre.statut_offre_id')
             ->join('utilisateurs u', 'u.id = Offre.id_rh')
             ->find($offreId);
@@ -56,8 +59,9 @@ class OffresModel extends Model
             return null;
         }
 
-        $offre['besoin'] = (new BesoinsModel())->getBesoinAvecDetails((int) $offre['besoin_id']);
+        // $offre['besoin'] = (new BesoinsModel())->getBesoinAvecDetails((int) $offre['besoin_id']);
 
         return $offre;
     }
+
 }
