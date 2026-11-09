@@ -1,0 +1,277 @@
+ERROR - 2026-11-09 05:23:25 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(615): CodeIgniter\Model->doFind()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-09 05:23:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+[Method: GET, Route: manager/besoins]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Manager/ManagerController.php(219): CodeIgniter\BaseModel->find()
+ 6 APPPATH/Controllers/Manager/ManagerController.php(46): App\Controllers\Manager\ManagerController->managerConnecte()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Manager\ManagerController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-09 15:10:41 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Models/OffresModel.php(34): CodeIgniter\BaseModel->findAll()
+#7 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Rh/RhController.php(73): App\Models\OffresModel->getAll()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Rh\RhController->getListOffre()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /home/andrianina/s5/gestion/entreprise/back/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andrianina/s5/gestion/entreprise/back/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andrianina/s5/gestion/entreprise/back/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andrianina/s5/gestion/entreprise/back/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/andrianina/s5/gestion/entreprise/back/app/Models/OffresModel.php(34): CodeIgniter\BaseModel->findAll()
+#6 /home/andrianina/s5/gestion/entreprise/back/app/Controllers/Rh/RhController.php(73): App\Models\OffresModel->getAll()
+#7 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(951): App\Controllers\Rh\RhController->getListOffre()
+#8 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andrianina/s5/gestion/entreprise/back/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andrianina/s5/gestion/entreprise/back/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andrianina/s5/gestion/entreprise/back/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-11-09 15:10:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+[Method: GET, Route: rh/offres]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/OffresModel.php(34): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Rh/RhController.php(73): App\Models\OffresModel->getAll()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getListOffre()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:40:38 --> TypeError: join(): Argument #2 ($array) must be of type ?array, string given
+[Method: GET, Route: rh/offres/1]
+in APPPATH/Models/OffresModel.php on line 50.
+ 1 APPPATH/Models/OffresModel.php(50): join()
+ 2 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:41:52 --> TypeError: join(): Argument #2 ($array) must be of type ?array, string given
+[Method: GET, Route: rh/offres/1]
+in APPPATH/Models/OffresModel.php on line 51.
+ 1 APPPATH/Models/OffresModel.php(51): join()
+ 2 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:41:53 --> TypeError: join(): Argument #2 ($array) must be of type ?array, string given
+[Method: GET, Route: rh/offres/1]
+in APPPATH/Models/OffresModel.php on line 51.
+ 1 APPPATH/Models/OffresModel.php(51): join()
+ 2 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:42:15 --> TypeError: join(): Argument #2 ($array) must be of type ?array, string given
+[Method: GET, Route: rh/offres/1]
+in APPPATH/Models/OffresModel.php on line 51.
+ 1 APPPATH/Models/OffresModel.php(51): join()
+ 2 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:42:17 --> TypeError: join(): Argument #2 ($array) must be of type ?array, string given
+[Method: GET, Route: rh/offres/1]
+in APPPATH/Models/OffresModel.php on line 51.
+ 1 APPPATH/Models/OffresModel.php(51): join()
+ 2 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-09 15:43:05 --> Unknown column 'dp.id_poste' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 7 APPPATH/Models/OffresModel.php(55): CodeIgniter\BaseModel->find()
+ 8 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:43:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'dp.id_poste' in 'on clause'
+[Method: GET, Route: rh/offres/1]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 4 APPPATH/Models/OffresModel.php(55): CodeIgniter\BaseModel->find()
+ 5 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:43:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'dp.id_poste' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 310.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 6 APPPATH/Models/OffresModel.php(55): CodeIgniter\BaseModel->find()
+ 7 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:43:05 --> [Caused by] mysqli_sql_exception: Unknown column 'dp.id_poste' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 7 APPPATH/Models/OffresModel.php(55): CodeIgniter\BaseModel->find()
+ 8 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-11-09 15:43:08 --> Unknown column 'dp.id_poste' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 7 APPPATH/Models/OffresModel.php(55): CodeIgniter\BaseModel->find()
+ 8 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:43:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'dp.id_poste' in 'on clause'
+[Method: GET, Route: rh/offres/1]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 4 APPPATH/Models/OffresModel.php(55): CodeIgniter\BaseModel->find()
+ 5 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:43:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'dp.id_poste' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 310.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 6 APPPATH/Models/OffresModel.php(55): CodeIgniter\BaseModel->find()
+ 7 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-11-09 15:43:08 --> [Caused by] mysqli_sql_exception: Unknown column 'dp.id_poste' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(192): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(615): CodeIgniter\Model->doFind()
+ 7 APPPATH/Models/OffresModel.php(55): CodeIgniter\BaseModel->find()
+ 8 APPPATH/Controllers/Rh/RhController.php(62): App\Models\OffresModel->getDetails()
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Rh\RhController->getDetailsOffre()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()

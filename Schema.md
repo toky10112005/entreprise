@@ -26,7 +26,11 @@ Nokotiana:(Toky):
 - Offre(**id_offre**,besoin_id,id_rh,statut_offre_id,date_insertion)
 - candidats(**id_candidat**,nom,prenom,email,statut_candidat_id,date_insertion)
 - HistoriqueStatutCandidat(**id_historique_statut_candidat**,candidat_id,statut_candidat_id,date_insertion,commentaire)
-- candidatures(**id_candidature**,offre_id,candidat_id,cv,statut_candidature,date_insertion,date_modification,commentaire)
+- candidatures(**id_candidature**,offre_id,candidat_id,cv,lettre_motivation,statut_candidature,date_insertion,date_modification,commentaire)
 - entretiens(**id_entretien**,candidature_id,date_entretien,statut_entretien,commentaire,rh_id)
 - contrats(**id_contrat**,candidature_id,date_debut,date_fin,salaire,commentaire)
--historique_candidature(**id_historique_candidature**,candidature_id,statut_candidature_id,date_insertion,commentaire)
+- historique_candidature(**id_historique_candidature**,candidature_id,statut_candidature_id,date_insertion,commentaire)
+
+## Ajout bloc 2
+- details_poste(**id_detail_poste**,#id_poste,salaire_max,salaire_min,objectifs(`KPI`),valeur,mode_de_travail(`presence ou teletravail`),Competences_techniques,formation)
+

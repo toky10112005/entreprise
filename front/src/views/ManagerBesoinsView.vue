@@ -17,6 +17,7 @@ async function chargerBesoins() {
     besoins.value = response.besoins ?? []
   } catch (exception) {
     error.value = exception.message
+    console.error(error);
   } finally {
     loading.value = false
   }
