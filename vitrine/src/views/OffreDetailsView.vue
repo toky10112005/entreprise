@@ -1,10 +1,11 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import { getDetailsOffre, getListOffre } from '@/services/api'
+import { getDetailsOffre, getListOffre, postulerOffre } from '@/services/api'
 import {afficher,formaterDate} from '@/utils/format'
 const offres = ref([])
 const loading = ref(false)
 const error = ref('')
+const candidatures = ref({})
 
 async function chargerOffres() {
   loading.value = true
@@ -30,6 +31,43 @@ async function chargerOffres() {
 }
 
 onMounted(chargerOffres)
+
+function etatCandidature(idOffre) {
+  return candidatures.value[idOffre] ?? { loading: false, error: '', success: '', visible: false }
+}
+
+function basculerFormulaire(idOffre) {
+  const etat = etatCandidature(idOffre)
+  candidatures.value[idOffre] = { ...etat, visible: !etat.visible }
+}
+
+async function soumettreCandidature(event, idOffre) {
+  candidatures.value[idOffre] = { ...etatCandidature(idOffre), loading: true, error: '', success: '' }
+
+  const formulaire = event.currentTarget
+  const donnees = new FormData(formulaire)
+  donnees.set('offre_id', idOffre)
+
+  try {
+    const response = await postulerOffre(donnees)
+    candidatures.value[idOffre] = {
+      loading: false,
+      error: '',
+      success: response.message ?? 'Candidature envoyée avec succès.',
+      visible: true,
+    }
+    formulaire.reset()
+  } catch (exception) {
+    candidatures.value[idOffre] = {
+      loading: false,
+      error: exception instanceof Error
+        ? exception.message
+        : 'Impossible d’envoyer la candidature.',
+      success: '',
+      visible: true,
+    }
+  }
+}
 </script>
 
 <template>
@@ -68,6 +106,47 @@ onMounted(chargerOffres)
         <dt>Contact:</dt>
         <dd>{{ offre.rh_email }}</dd>
         </dl>
+
+        <button type="button" @click="basculerFormulaire(offre.id_offre)">
+          Postuler
+        </button>
+
+        <form
+          v-if="etatCandidature(offre.id_offre).visible"
+          enctype="multipart/form-data"
+          @submit.prevent="soumettreCandidature($event, offre.id_offre)"
+        >
+          <h3>Déposer votre candidature</h3>
+          <label>
+            Prénom
+            <input name="prenom" type="text" required>
+          </label>
+          <label>
+            Nom
+            <input name="nom" type="text" required>
+          </label>
+          <label>
+            Adresse e-mail
+            <input name="email" type="email" required>
+          </label>
+          <label>
+            CV
+            <input name="cv" type="file" required>
+          </label>
+          <label>
+            Lettre de motivation (facultatif)
+            <input name="lettre_motivation" type="file">
+          </label>
+          <button type="submit" :disabled="etatCandidature(offre.id_offre).loading">
+            {{ etatCandidature(offre.id_offre).loading ? 'Envoi en cours...' : 'Envoyer ma candidature' }}
+          </button>
+          <p v-if="etatCandidature(offre.id_offre).error" role="alert">
+            {{ etatCandidature(offre.id_offre).error }}
+          </p>
+          <p v-if="etatCandidature(offre.id_offre).success" role="status">
+            {{ etatCandidature(offre.id_offre).success }}
+          </p>
+        </form>
       </article>
     </section>
   </main>
