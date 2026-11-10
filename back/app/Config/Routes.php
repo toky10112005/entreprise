@@ -7,6 +7,9 @@ use CodeIgniter\Router\RouteCollection;
 // Désactive le routage automatique : seules les routes déclarées sont accessibles
 $routes->setAutoRoute(false);
 
+$routes->group('candidature', function (RouteCollection $routes){
+    $routes->post('postuler','Candidature\CandidatureController::postulerOffre');
+});
 
 $routes->group('manager', function (RouteCollection $routes) {
     $routes->get('besoins',          'Manager\ManagerController::index');     // liste de mes besoins (?statut=Soumise)
@@ -26,3 +29,4 @@ $routes->group('rh',function (RouteCollection $routes){
     $routes->get('offres','Rh\RhController::getListOffre');
     $routes->get('offres/(:num)','Rh\RhController::getDetailsOffre/$1');
 });
+
